@@ -1,7 +1,7 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
-// Alma (personaje) y estaciones
+
 const alma = {
     x: canvas.width / 2,
     y: canvas.height - 100,
@@ -33,7 +33,7 @@ async function loadQuestions() {
             acc[station.title.toLowerCase()] = station.questions;
             return acc;
         }, {});
-        console.log("Preguntas cargadas:", questions); // Verificar que se cargaron las preguntas
+        console.log("Preguntas cargadas:", questions); 
     } catch (error) {
         console.error('Error al cargar las preguntas:', error);
     }
@@ -56,14 +56,14 @@ function initializeStations() {
 }
 
 function drawAlma() {
-    // Dibujar cuerpo
+    
     ctx.beginPath();
     ctx.arc(alma.x, alma.y, alma.radius, 0, Math.PI * 2);
     ctx.fillStyle = alma.color;
     ctx.fill();
     ctx.closePath();
 
-    // Dibujar ojos
+    
     ctx.beginPath();
     ctx.arc(alma.x - eyes.xOffset, alma.y + eyes.yOffset, eyes.eyeRadius, 0, Math.PI * 2);
     ctx.arc(alma.x + eyes.xOffset, alma.y + eyes.yOffset, eyes.eyeRadius, 0, Math.PI * 2);
@@ -95,7 +95,7 @@ function updateStations() {
         station.y += scrollSpeed;
     });
 
-    // Verificar si alma llegó a una estación
+    
     if (stations.length > 0 && alma.y - alma.radius < stations[0].y + stationHeight) {
         const currentStation = stations.shift();
         const question = getRandomQuestion(currentStation.name);
@@ -143,5 +143,5 @@ function restartGame() {
     document.getElementById('ui').style.display = 'block';
 }
 
-// Cargar preguntas antes de iniciar el juego
+
 loadQuestions().then(() => drawScene());

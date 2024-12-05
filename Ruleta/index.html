@@ -13,16 +13,16 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #800000; /* Vinotinto */
+            background-color: #800000; 
             padding: 0 20px;
-            border: 5px solid #333; /* Marco alrededor de la página */
+            border: 5px solid #333; 
         }
 
         .titulo {
             font-size: 36px;
             color: white;
             text-align: center;
-            margin-bottom: 40px; /* Espacio entre el título y la ruleta */
+            margin-bottom: 40px; 
         }
 
         .ruleta-container {
@@ -32,7 +32,7 @@
             border-radius: 50%;
             border: 5px solid #333;
             overflow: hidden;
-            margin-bottom: 30px; /* Espacio entre la ruleta y las categorías */
+            margin-bottom: 30px; 
         }
 
         .ruleta {
@@ -75,14 +75,14 @@
             background-color: #555;
         }
 
-        /* Contenedor de categorías */
+        
         .categorias {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-items: flex-start;
             margin-top: 20px;
-            color: black; /* Cambio de color de texto a negro */
+            color: black; 
             width: 100%;
         }
 
@@ -90,7 +90,7 @@
             padding: 10px;
             margin: 5px;
             border-radius: 5px;
-            color: black; /* Cambio de color de texto a negro */
+            color: black; 
             text-align: center;
             font-weight: bold;
             font-size: 14px;
@@ -110,17 +110,17 @@
     </div>
 
     <div class="categorias" id="categorias">
-        <!-- Las categorías se cargarán aquí -->
+        
     </div>
 
     <script>
-        // Variable para almacenar el último ángulo
+        
         let ultimoAngulo = 0;
 
-        // Array de colores
+        
         const colores = ['rojo', 'naranja', 'amarillo', 'verde', 'azul', 'índigo', 'violeta', 'rosa'];
 
-        // Categorías y colores asociados
+        
         const categoriasColores = {
             "rojo": "Éxito",
             "naranja": "Actividad física",
@@ -132,7 +132,7 @@
             "rosa": "Posición laboral"
         };
 
-        // Preguntas por categoría
+        
         const questions = {
             "Éxito": {
                 "1": "¿Qué es el éxito para usted?",
@@ -185,62 +185,61 @@
             }
         };
 
-        // Mostrar las categorías con su color respectivo
+        
         function mostrarCategorias() {
             const categoriasContainer = document.getElementById('categorias');
             colores.forEach((color) => {
                 const categoriaName = categoriasColores[color];
                 const categoriaDiv = document.createElement('div');
                 categoriaDiv.classList.add('categoria');
-                categoriaDiv.style.backgroundColor = color;  // Colorear el recuadro de la categoría
+                categoriaDiv.style.backgroundColor = color;  
                 categoriaDiv.textContent = categoriaName;
                 categoriasContainer.appendChild(categoriaDiv);
             });
         }
 
         function girarRuleta() {
-            // Desactivar el botón
+            
             const btnGirar = document.getElementById("btnGirar");
             btnGirar.disabled = true;
 
-            // Calcular el nuevo ángulo (siempre en el sentido horario)
-            let vueltasExtras = 3;  // Vuelta fija de 3 vueltas
-            let anguloAleatorio = Math.floor(Math.random() * 360); // Ángulo entre 0 y 360
+            
+            let vueltasExtras = 3;  
+            let anguloAleatorio = Math.floor(Math.random() * 360); 
             let anguloFinal = ultimoAngulo + (vueltasExtras * 360) + anguloAleatorio;
 
-            // Actualizamos el último ángulo con el valor final
+        
             ultimoAngulo = anguloFinal;
 
-            // Aplicar el giro con la animación
+            
             const ruleta = document.querySelector('.ruleta');
-            ruleta.style.transition = 'transform 3s ease-out';  // Animación con duración de 3 segundos
-            ruleta.style.transform = `rotate(${anguloFinal}deg)`; // Gira al nuevo ángulo calculado
+            ruleta.style.transition = 'transform 3s ease-out';  
+            ruleta.style.transform = `rotate(${anguloFinal}deg)`; 
 
-            // Rehabilitar el botón después de que termine el giro
+        
             setTimeout(function() {
                 btnGirar.disabled = false;
                 mostrarPregunta(anguloFinal);
-            }, 3000); // Deshabilitar por 3 segundos (duración de la animación)
+            }, 3000); 
         }
 
         function mostrarPregunta(anguloFinal) {
-            // Determinar el color frente a la ruleta
+        
             let anguloDerecha = anguloFinal % 360;
-            let seccion = Math.floor(anguloDerecha / 45); // Cada sección tiene 45 grados
-
-            // Obtener la categoría según el color
+            let seccion = Math.floor(anguloDerecha / 45); 
+            
             const categoria = categoriasColores[colores[seccion]];
 
-            // Obtener una pregunta aleatoria de la categoría seleccionada
+            
             const preguntas = Object.values(questions[categoria]);
             const numeroAleatorio = Math.floor(Math.random() * preguntas.length);
             const preguntaSeleccionada = preguntas[numeroAleatorio];
 
-            // Mostrar la pregunta en un alert
+            
             alert(`Pregunta de la categoría ${categoria}: ${preguntaSeleccionada}`);
         }
 
-        // Mostrar las categorías al cargar la página
+        
         mostrarCategorias();
     </script>
 

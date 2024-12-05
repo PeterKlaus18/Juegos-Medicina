@@ -103,7 +103,7 @@ const totalRows = 18;
                                 if (j === 2) rowState.right = true;
 
                                 
-                                const baseThreshold = 50; 
+                                const baseThreshold = 30; 
                                 const endProbability = Math.max(0, (removedButtons / totalButtons) * 100 - baseThreshold);
                                 if (Math.random() * 100 < endProbability) {
                                     alert(`¡Juego terminado! La torre ha caido.`);
