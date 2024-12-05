@@ -14,15 +14,14 @@ body {
 /* Contenedor principal que contiene el tablero y los controles */
 .board-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 /* Tablero */
 .board {
     display: grid;
-    grid-template-columns: repeat(10, 1fr); /* 10 columnas */
-    grid-template-rows: repeat(10, 1fr); /* 10 filas */
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+    grid-template-rows: repeat(7, 1fr); /* 7 filas */
     width: 600px; /* Tamaño total del tablero */
     height: 600px; /* Tamaño total del tablero */
     position: relative;
@@ -35,7 +34,7 @@ body {
 /* Nombre del juego en el centro */
 .game-name {
     position: absolute; /* Colocarlo en posición absoluta */
-    top: 50%;
+    top: 38%; /* Subirlo un poco más para centrarlo mejor */
     left: 50%; /* Centrar horizontalmente */
     transform: translate(-50%, -50%) rotate(45deg); /* Centrar y rotar el texto */
     font-size: 36px; /* Ajustar el tamaño del texto */
@@ -58,7 +57,6 @@ body {
     box-sizing: border-box;
     border: 2px solid #1A2A44; /* Bordes de las casillas jugables */
     position: relative; /* Para posicionar las piezas de los jugadores dentro */
-    background-color: #f4f4f9; /* Color de fondo por defecto */
 }
 
 /* Colores específicos para las casillas */
@@ -95,10 +93,9 @@ body {
 
 /* Estilos para el botón */
 .button-container {
-    margin-top: 20px; /* Separación entre el tablero y el botón */
+    margin-left: 20px; /* Separación entre el tablero y el botón */
 }
 
-/* Botón */
 button {
     padding: 10px 20px;
     background-color: #1A2A44;

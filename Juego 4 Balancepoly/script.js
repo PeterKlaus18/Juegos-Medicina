@@ -34,63 +34,115 @@ const players = [
 
 let currentPlayerIndex = 0;
 
-// Inicializar las casillas y las piezas
-function initializeBoard() {
-    const board = document.querySelector('.board');
-    board.innerHTML = ''; // Limpiar el tablero
+// Definir el tablero de juego (con las posiciones válidas)
+const boardMatrix = [
+    [12, 13, 14, 15, 16, 17, 18],
+    [11, 0, 0, 0, 0, 0, 19],
+    [10, 0, 0, 0, 0, 0, 20],
+    [9, 0, 0, 0, 0, 0, 21],
+    [8, 0, 0, 0, 0, 0, 22],
+    [7, 6, 5, 4, 3, 2, 1]
+];
 
-    // Crear las casillas
-    for (let i = 1; i <= 40; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('cell');
-        cell.dataset.dimension = casillaData[i] ? casillaData[i].color : 'gray';
-        cell.textContent = casillaData[i] ? casillaData[i].name : '';
-        board.appendChild(cell);
+// Obtener las casillas válidas (sin ceros) para el movimiento
+const validCells = [];
+for (let row = 0; row < boardMatrix.length; row++) {
+    for (let col = 0; col < boardMatrix[row].length; col++) {
+        const cellValue = boardMatrix[row][col];
+        if (cellValue !== 0) {
+            validCells.push(cellValue); // Solo agregamos las casillas válidas (no cero)
+        }
     }
+}
 
-    // Crear las piezas de los jugadores
+// Generar el tablero en el HTML
+function generateBoard() {
+    const board = document.querySelector('.board');
+
+    // Recorremos la matriz y agregamos las casillas al tablero
+    for (let row = 0; row < boardMatrix.length; row++) {
+        for (let col = 0; col < boardMatrix[row].length; col++) {
+            const cellValue = boardMatrix[row][col];
+
+            if (cellValue !== 0) {
+                // Crear una casilla solo si no es un 0
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.id = `cell-${cellValue}`;
+
+                // Asignar el data-dimension a la casilla según la dimensión
+                if (casillaData[cellValue]) {
+                    cell.setAttribute('data-dimension', casillaData[cellValue].color);
+                    cell.textContent = casillaData[cellValue].name;
+                }
+
+                // Crear un contenedor para las piezas de los jugadores
+                const cellPlayers = document.createElement('div');
+                cellPlayers.classList.add('cell-players');
+                cell.appendChild(cellPlayers);
+
+                board.appendChild(cell);
+            } else {
+                const emptyCell = document.createElement('div');
+                emptyCell.classList.add('cell');
+                emptyCell.style.border = 'none'; // Asegurarnos de que no tenga borde
+                board.appendChild(emptyCell);
+            }
+        }
+    }
+}
+
+// Crear las piezas de los jugadores
+function createPlayerPieces() {
     players.forEach(player => {
         const piece = document.createElement('div');
-        piece.classList.add('player-piece', player.color);
+        piece.classList.add('player-piece');
+        piece.style.backgroundColor = player.color;
+        piece.id = `player-${player.id}`;
         player.piece = piece;
-        document.querySelector('.board').appendChild(piece);
-    });
 
-    updatePlayerPosition();
-}
-
-// Actualizar la posición de la pieza del jugador
-function updatePlayerPosition() {
-    players.forEach(player => {
-        const cell = document.querySelectorAll('.cell')[player.position - 1];
-        const piece = player.piece;
-        const rect = cell.getBoundingClientRect();
-        piece.style.top = `${rect.top + window.scrollY + rect.height / 2 - piece.offsetHeight / 2}px`;
-        piece.style.left = `${rect.left + window.scrollX + rect.width / 2 - piece.offsetWidth / 2}px`;
+        // Inicialmente, coloca las piezas sobre la casilla 1 (salida)
+        const startCell = document.getElementById('cell-1').querySelector('.cell-players');
+        startCell.appendChild(piece);
     });
 }
 
-// Lanzar el dado
+// Función para lanzar el dado
 function rollDice() {
-    const diceRoll = Math.floor(Math.random() * 6) + 1;
-    document.getElementById('diceResult').textContent = `Resultado del dado: ${diceRoll}`;
+    const diceRoll = Math.floor(Math.random() * 6) + 1; // Lanzar el dado (1-6)
+    const currentPlayer = players[currentPlayerIndex];
+    const oldPosition = currentPlayer.position;
 
-    // Mover al jugador actual
-    let currentPlayer = players[currentPlayerIndex];
-    currentPlayer.position += diceRoll;
-
-    // Si el jugador pasa la última casilla, regresa al principio
-    if (currentPlayer.position > 40) {
-        currentPlayer.position = currentPlayer.position - 40;
+    // Sumar el valor del dado a la posición actual del jugador en la lista de casillas válidas
+    let newPositionIndex = validCells.indexOf(currentPlayer.position) + diceRoll;
+    
+    // Si la nueva posición se pasa del límite, se ajusta a la última casilla válida
+    if (newPositionIndex >= validCells.length) {
+        newPositionIndex = validCells.length - 1;
     }
 
-    // Actualizar la posición del jugador y cambiar de turno
-    updatePlayerPosition();
+    currentPlayer.position = validCells[newPositionIndex]; // Establecer la nueva posición
 
-    // Cambiar al siguiente jugador
-    currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
-    document.getElementById('currentPlayer').textContent = `Turno del jugador: ${players[currentPlayerIndex].id + 1}`;
+    // Mover la pieza a la nueva casilla
+    const newCellId = `cell-${currentPlayer.position}`;
+    const newCell = document.getElementById(newCellId).querySelector('.cell-players');
+
+    // Colocamos la pieza en la nueva casilla
+    const piece = currentPlayer.piece;
+    newCell.appendChild(piece);
+
+    // Eliminar la pieza de la casilla anterior
+    const oldCell = document.getElementById(`cell-${oldPosition}`).querySelector('.cell-players');
+    oldCell.removeChild(piece);
+
+    // Mostrar el resultado del dado
+    document.getElementById('diceResult').textContent = `Resultado del dado: ${diceRoll}`;
+
+    // Actualizar el turno del jugador
+    currentPlayerIndex = (currentPlayerIndex + 1) % players.length; // Cambiar de jugador
+    document.getElementById('currentPlayer').textContent = `Turno del jugador: ${currentPlayerIndex + 1}`;
 }
 
-// Inicializar el tablero al cargar la página
-initializeBoard();
+// Inicializar el tablero y las piezas
+generateBoard();
+createPlayerPieces();
