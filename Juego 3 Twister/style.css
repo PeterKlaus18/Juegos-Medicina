@@ -1,4 +1,4 @@
-/* style.css */
+
 
 body {
     font-family: Arial, sans-serif;
@@ -13,9 +13,9 @@ body {
 
 #board {
     display: grid;
-    grid-template-rows: repeat(6, 100px);  /* 6 filas */
-    grid-template-columns: repeat(4, 100px);  /* 4 columnas */
-    gap: 10px;  /* Espacio entre las celdas */
+    grid-template-rows: repeat(6, 100px);  
+    grid-template-columns: repeat(4, 100px);  
+    gap: 10px;  
 }
 
 .cell {
@@ -24,12 +24,12 @@ body {
     align-items: center;
     width: 100px;
     height: 100px;
-    border-radius: 50%;  /* Forma circular */
+    border-radius: 50%;  
     font-size: 24px;
     font-weight: bold;
     color: white;
     position: relative;
-    border: 2px solid black;  /* Borde negro alrededor de cada celda */
+    border: 2px solid black; 
 }
 
 .verde {
@@ -38,7 +38,7 @@ body {
 
 .amarillo {
     background-color: yellow;
-    color: black; /* Cambiar color de texto a negro para mejor visibilidad */
+    color: black; 
 }
 
 .azul {
@@ -60,24 +60,24 @@ button:hover {
     background-color: #ddd;
 }
 
-/* Estilo para los íconos de mano */
+
 .cell i {
-    font-size: 40px; /* Tamaño de los íconos */
+    font-size: 40px;
     color: white;
-    border: 2px solid black; /* Borde negro para las manos */
-    border-radius: 50%; /* Borde redondeado */
-    padding: 5px; /* Espacio entre el borde y el ícono */
+    border: 2px solid black; 
+    border-radius: 50%; 
+    padding: 5px;
 }
 
-/* Estilo para el ícono de pie (óvalo alargado en posición vertical) */
+
 .pie {
-    width: 30px;  /* Ancho más pequeño */
-    height: 60px; /* Altura más grande para la forma vertical */
+    width: 30px; 
+    height: 60px; 
     background-color: white;
-    border-radius: 50%;  /* Bordes redondeados */
+    border-radius: 50%; 
     position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Agregar sombra para hacerlo más visible */
-    border: 2px solid black; /* Borde negro alrededor del pie */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
+    border: 2px solid black; 
 }
 
 .pie::before {

@@ -1,21 +1,21 @@
-/* Estilos generales */
+
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #e3f2fd; /* Fondo azul claro */
+    background-color: #e3f2fd; 
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Estilos para el título */
+
 h1 {
     font-size: 36px;
     color: #007bff;
     margin-top: 50px;
 }
 
-/* Estilo para el contenedor de las pantallas */
+
 .inicio, .juego, .resultado {
     display: flex;
     justify-content: center;
@@ -24,7 +24,7 @@ h1 {
     height: 100vh;
 }
 
-/* Botones principales */
+
 button {
     background-color: #007bff;
     color: white;
@@ -40,14 +40,14 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Botones de las categorías */
+
 .botones-categorias button {
     font-size: 20px;
     margin: 10px;
     width: 60%;
 }
 
-/* Estilo para las preguntas */
+
 #pregunta {
     margin-top: 30px;
 }
@@ -63,7 +63,7 @@ button:hover {
     font-weight: bold;
 }
 
-/* Ajustes para cuando no se está jugando */
+
 #resultado {
     display: none;
 }
