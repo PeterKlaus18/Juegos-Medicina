@@ -1,13 +1,16 @@
 
 let questions = {};
 
-
+// Cargar preguntas desde questions.json
 fetch('questions.json')
     .then(response => response.json())
     .then(data => {
-        questions = data;
+        questions = data; // Guardamos las preguntas en la variable global
+        console.log('Preguntas cargadas:', questions);
     })
     .catch(error => console.error('Error al cargar preguntas:', error));
+
+
 
 
 function colocarIconos() {
@@ -61,21 +64,83 @@ function colocarIconos() {
     }
 
     // Desactivar el botón después de colocar todas las manos y pies
-    document.querySelector("button").disabled = true;
-    document.querySelector("button").innerText = "Ya están colocados";
+    document.querySelector("#colocar-boton").disabled = true;
+    document.querySelector("#colocar-boton").innerText = "Ya están colocados";
 }
 
 // Función para manejar el clic en los botones de mano o pie
 function manejarClick(boton, tipo) {
-    // Selecciona una pregunta aleatoria
-    const pregunta = questions[Math.floor(Math.random() * questions.length)];
+    // Verificar que las preguntas estén cargadas
+    if (Object.keys(questions).length === 0) {
+        alert('Las preguntas aún no se han cargado. Por favor, intenta nuevamente.');
+        return;
+    }
 
-    // Muestra la alerta con la pregunta
+    // Identificar el color de la casilla
+    const casilla = boton.parentElement;
+    const color = Array.from(casilla.classList).find(clase => ['amarillo', 'rojo', 'verde', 'azul'].includes(clase));
+
+    if (!color) {
+        alert('No se puede determinar el color de esta casilla.');
+        return;
+    }
+
+    // Seleccionar la categoría de preguntas basada en el color
+    let categoria;
+    switch (color) {
+        case 'amarillo':
+            categoria = 'social';
+            break;
+        case 'rojo':
+            categoria = 'fisico';
+            break;
+        case 'verde':
+            categoria = 'academico';
+            break;
+        case 'azul':
+            categoria = 'espiritual_emocional';
+            break;
+    }
+
+    // Obtener una pregunta aleatoria de la categoría
+    const preguntasCategoria = questions[categoria]?.[color] || [];
+    if (preguntasCategoria.length === 0) {
+        alert('No hay preguntas disponibles para esta categoría.');
+        return;
+    }
+
+    const pregunta = preguntasCategoria[Math.floor(Math.random() * preguntasCategoria.length)];
+
+    // Mostrar la pregunta al usuario
     if (confirm(pregunta)) {
         // Si el usuario presiona "Aceptar", elimina el botón
         boton.parentElement.innerHTML = "";  // Limpia el contenido de la celda
+
+        // Verificar si todas las extremidades han sido eliminadas
+        verificarVictoria();
     } else {
         // Si el usuario presiona "Cancelar", muestra una alerta
         alert("Selecciona otra extremidad");
     }
+}
+
+// Verificar si el jugador ha ganado
+function verificarVictoria() {
+    const botonesRestantes = document.querySelectorAll('.boton');
+    if (botonesRestantes.length === 0) {
+        alert('¡Felicidades! Has ganado el juego.');
+        reiniciarTablero();
+    }
+}
+
+// Reiniciar el tablero
+function reiniciarTablero() {
+    const celdas = document.querySelectorAll('.cell');
+    celdas.forEach(celda => {
+        celda.innerHTML = ""; // Limpia el contenido de todas las celdas
+    });
+
+    const botonColocar = document.querySelector('button');
+    botonColocar.disabled = false;
+    botonColocar.innerText = "Colocar Manos y Pies";
 }
