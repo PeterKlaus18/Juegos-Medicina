@@ -1,0 +1,79 @@
+{
+    "stations": [
+        {
+            "title": "Emocional",
+            "questions": [
+                "¿Cuidaste de tus relaciones cercanas?",
+                "¿Expresaste gratitud con frecuencia?",
+                "¿Perdonaste a quienes te hicieron daño?",
+                "¿Compartiste tus emociones con sinceridad?",
+                "¿Te preocupaste por las emociones de los demás?",
+                "¿Demostraste empatía en tus interacciones?",
+                "¿Valoraste las conexiones emocionales profundas?",
+                "¿Te reconciliaste con viejas amistades?",
+                "¿Ayudaste a alguien en un momento emocional difícil?",
+                "¿Te esforzaste por mantener relaciones saludables?"
+            ]
+        },
+        {
+            "title": "Academico",
+            "questions": [
+                "¿Buscaste aprender cosas nuevas?",
+                "¿Compartiste tus conocimientos?",
+                "¿Te esforzaste en mejorar tus habilidades?",
+                "¿Terminaste lo que comenzaste a estudiar?",
+                "¿Fuiste curioso sobre el mundo?",
+                "¿Aceptaste los errores como parte del aprendizaje?",
+                "¿Leíste libros que enriquecieron tu mente?",
+                "¿Participaste en actividades educativas?",
+                "¿Motivaste a otros a aprender?",
+                "¿Valorizaste el conocimiento por encima del entretenimiento?"
+            ]
+        },
+        {
+            "title": "Fisico",
+            "questions": [
+                "¿Cuidaste tu cuerpo?",
+                "¿Fomentaste hábitos saludables?",
+                "¿Hiciste ejercicio regularmente?",
+                "¿Comiste alimentos nutritivos?",
+                "¿Te hiciste chequeos médicos?",
+                "¿Evitaste hábitos dañinos para tu salud?",
+                "¿Dormiste lo suficiente?",
+                "¿Escuchaste las señales de tu cuerpo?",
+                "¿Manejaste el estrés de manera saludable?",
+                "¿Mantienes un balance entre actividad y descanso?"
+            ]
+        },
+        {
+            "title": "Espiritual",
+            "questions": [
+                "¿Buscaste paz interior?",
+                "¿Reflexionaste sobre tu propósito?",
+                "¿Practicaste algún tipo de meditación?",
+                "¿Te reconectaste con la naturaleza?",
+                "¿Fomentaste tu crecimiento espiritual?",
+                "¿Tuviste fe en momentos difíciles?",
+                "¿Cultivaste gratitud en tu vida?",
+                "¿Ayudaste a otros sin esperar nada a cambio?",
+                "¿Buscaste comprender el significado de tu existencia?",
+                "¿Dedicaste tiempo a reflexionar sobre tus acciones?"
+            ]
+        },
+        {
+            "title": "Social",
+            "questions": [
+                "¿Ayudaste a otros en necesidad?",
+                "¿Fuiste honesto con quienes te rodean?",
+                "¿Te involucraste en actividades comunitarias?",
+                "¿Hiciste sentir valoradas a las personas?",
+                "¿Fomentaste la paz en tu entorno?",
+                "¿Evitaste conflictos innecesarios?",
+                "¿Fuiste amable con extraños?",
+                "¿Te interesaste genuinamente por los demás?",
+                "¿Aceptaste a las personas por quienes son?",
+                "¿Inspiraste a otros con tus acciones?"
+            ]
+        }
+    ]
+}

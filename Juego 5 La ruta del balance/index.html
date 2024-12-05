@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Ruta del Balance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="inicio" class="inicio">
+        <h1>La Ruta del Balance</h1> 
+        <button id="startBtn">Iniciar Juego</button>
+    </div>
+
+    
+    <div id="juego" class="juego" style="display: none;">
+        <div id="botonesCategorias" class="botones-categorias">
+            
+        </div>
+        
+        <div id="pregunta" style="display: none;">
+            <p id="textoPregunta"></p>
+            <button class="respuesta" id="respuesta1"></button>
+            <button class="respuesta" id="respuesta2"></button>
+            <button class="respuesta" id="respuesta3"></button>
+        </div>
+    </div>
+
+
+    <div id="resultado" class="resultado" style="display: none;">
+        <p id="resultadoTexto"></p>
+        <button id="reiniciarBtn">Reiniciar Juego</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

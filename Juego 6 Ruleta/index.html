@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RULETA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #800000; /* Vinotinto */
+            padding: 0 20px;
+            border: 5px solid #333; /* Marco alrededor de la página */
+        }
+
+        .titulo {
+            font-size: 36px;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px; /* Espacio entre el título y la ruleta */
+        }
+
+        .ruleta-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #333;
+            overflow: hidden;
+            margin-bottom: 30px; /* Espacio entre la ruleta y las categorías */
+        }
+
+        .ruleta {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: conic-gradient(
+                red 0% 12.5%, 
+                orange 12.5% 25%, 
+                yellow 25% 37.5%, 
+                green 37.5% 50%, 
+                blue 50% 62.5%, 
+                indigo 62.5% 75%, 
+                violet 75% 87.5%, 
+                pink 87.5% 100%
+            );
+            transition: transform 3s ease-out;
+        }
+
+        .btn-girar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn-girar:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .btn-girar:hover:enabled {
+            background-color: #555;
+        }
+
+        /* Contenedor de categorías */
+        .categorias {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 20px;
+            color: black; /* Cambio de color de texto a negro */
+            width: 100%;
+        }
+
+        .categoria {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            color: black; /* Cambio de color de texto a negro */
+            text-align: center;
+            font-weight: bold;
+            font-size: 14px;
+            width: 150px;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="titulo">RULETA</div>
+
+    <div class="ruleta-container">
+        <div class="ruleta"></div>
+        <button class="btn-girar" id="btnGirar" onclick="girarRuleta()">Girar</button>
+    </div>
+
+    <div class="categorias" id="categorias">
+        <!-- Las categorías se cargarán aquí -->
+    </div>
+
+    <script>
+        // Variable para almacenar el último ángulo
+        let ultimoAngulo = 0;
+
+        // Array de colores
+        const colores = ['rojo', 'naranja', 'amarillo', 'verde', 'azul', 'índigo', 'violeta', 'rosa'];
+
+        // Categorías y colores asociados
+        const categoriasColores = {
+            "rojo": "Éxito",
+            "naranja": "Actividad física",
+            "amarillo": "Salud mental",
+            "verde": "Tiempo libre",
+            "azul": "Relaciones interpersonales",
+            "índigo": "Estabilidad económica",
+            "violeta": "Realización personal",
+            "rosa": "Posición laboral"
+        };
+
+        // Preguntas por categoría
+        const questions = {
+            "Éxito": {
+                "1": "¿Qué es el éxito para usted?",
+                "2": "Definición: El éxito es el resultado de completar satisfactoriamente una tarea, proyecto, meta o acción...",
+                "3": "Objetivos para alcanzar el éxito: Ser más claros con nuestros objetivos, Crear rutinas y llevar un registro...",
+                "4": "Análisis y contraste",
+                "5": "¿Con qué actividades o componentes equilibrarías el éxito para tener una estabilidad diaria?"
+            },
+            "Actividad física": {
+                "1": "¿Qué es actividad física para usted?",
+                "2": "Definición: La OMS define la actividad física como todo movimiento corporal...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías la actividad física para tener una estabilidad diaria?"
+            },
+            "Salud mental": {
+                "1": "¿Qué es salud mental para usted?",
+                "2": "Definición: Es el bienestar social, emocional y psicológico...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías la salud mental para tener una estabilidad diaria?"
+            },
+            "Tiempo libre": {
+                "1": "¿Qué es el tiempo libre para usted?",
+                "2": "Definición: Se refiere a periodo de tiempo disponible que una persona utiliza de manera voluntaria...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías el tiempo libre para tener una estabilidad diaria?"
+            },
+            "Relaciones interpersonales": {
+                "1": "¿Qué son las relaciones interpersonales para usted?",
+                "2": "Definición: Son los vínculos que se desarrollan a lo largo de la vida...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías las relaciones interpersonales para tener una estabilidad diaria?"
+            },
+            "Estabilidad económica": {
+                "1": "¿Qué es estabilidad económica para usted?",
+                "2": "Definición: Es cuando una persona tiene seguridad y previsibilidad en sus ingresos...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías la estabilidad económica para tener una estabilidad diaria?"
+            },
+            "Realización personal": {
+                "1": "¿Qué es realización personal para usted?",
+                "2": "Definición: Es la sensación de satisfacción y cumplimiento que una persona experimenta al lograr sus metas...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías la realización personal para tener una estabilidad diaria?"
+            },
+            "Posición laboral": {
+                "1": "¿Qué es posición laboral para usted?",
+                "2": "Definición: Según el Ministerio de Educación Nacional, es la posición que la persona adquiere en el ejercicio de su trabajo...",
+                "3": "Análisis y contraste",
+                "4": "¿Con qué actividades o componentes equilibrarías la posición laboral para tener una estabilidad diaria?"
+            }
+        };
+
+        // Mostrar las categorías con su color respectivo
+        function mostrarCategorias() {
+            const categoriasContainer = document.getElementById('categorias');
+            colores.forEach((color) => {
+                const categoriaName = categoriasColores[color];
+                const categoriaDiv = document.createElement('div');
+                categoriaDiv.classList.add('categoria');
+                categoriaDiv.style.backgroundColor = color;  // Colorear el recuadro de la categoría
+                categoriaDiv.textContent = categoriaName;
+                categoriasContainer.appendChild(categoriaDiv);
+            });
+        }
+
+        function girarRuleta() {
+            // Desactivar el botón
+            const btnGirar = document.getElementById("btnGirar");
+            btnGirar.disabled = true;
+
+            // Calcular el nuevo ángulo (siempre en el sentido horario)
+            let vueltasExtras = 3;  // Vuelta fija de 3 vueltas
+            let anguloAleatorio = Math.floor(Math.random() * 360); // Ángulo entre 0 y 360
+            let anguloFinal = ultimoAngulo + (vueltasExtras * 360) + anguloAleatorio;
+
+            // Actualizamos el último ángulo con el valor final
+            ultimoAngulo = anguloFinal;
+
+            // Aplicar el giro con la animación
+            const ruleta = document.querySelector('.ruleta');
+            ruleta.style.transition = 'transform 3s ease-out';  // Animación con duración de 3 segundos
+            ruleta.style.transform = `rotate(${anguloFinal}deg)`; // Gira al nuevo ángulo calculado
+
+            // Rehabilitar el botón después de que termine el giro
+            setTimeout(function() {
+                btnGirar.disabled = false;
+                mostrarPregunta(anguloFinal);
+            }, 3000); // Deshabilitar por 3 segundos (duración de la animación)
+        }
+
+        function mostrarPregunta(anguloFinal) {
+            // Determinar el color frente a la ruleta
+            let anguloDerecha = anguloFinal % 360;
+            let seccion = Math.floor(anguloDerecha / 45); // Cada sección tiene 45 grados
+
+            // Obtener la categoría según el color
+            const categoria = categoriasColores[colores[seccion]];
+
+            // Obtener una pregunta aleatoria de la categoría seleccionada
+            const preguntas = Object.values(questions[categoria]);
+            const numeroAleatorio = Math.floor(Math.random() * preguntas.length);
+            const preguntaSeleccionada = preguntas[numeroAleatorio];
+
+            // Mostrar la pregunta en un alert
+            alert(`Pregunta de la categoría ${categoria}: ${preguntaSeleccionada}`);
+        }
+
+        // Mostrar las categorías al cargar la página
+        mostrarCategorias();
+    </script>
+
+</body>
+</html>

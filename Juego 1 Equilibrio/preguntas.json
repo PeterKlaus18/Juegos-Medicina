@@ -1,0 +1,104 @@
+{
+    "amarillo": [
+        "¿Cuál es la emoción que más te cuesta expresar y por qué?",
+        "¿Recuerdas una situación en la que hayas malinterpretado las emociones de otra persona?",
+        "¿Qué consecuencias tuvo?",
+        "¿Cómo sueles reaccionar cuando te sientes abrumado por emociones negativas?",
+        "¿Qué estrategias utilizas para regular tus emociones cuando estás estresado o enojado?",
+        "¿Crees que eres bueno expresando tus necesidades emocionales a los demás? ¿Por qué sí o por qué no?",
+        "¿Cuál ha sido el mayor desafío emocional que has enfrentado en tu vida y cómo lo superaste?",
+        "¿Te consideras una persona empática? ¿Por qué?",
+        "¿Cuál es la situación más difícil en la que has tenido que ponerte en el lugar de otra persona?",
+        "¿Cómo crees que la empatía puede fortalecer las relaciones?",
+        "¿Cuál es la relación más importante en tu vida y por qué?",
+        "¿Qué te cuesta más perdonar: un error propio o un error de otra persona?",
+        "¿Cómo manejas los conflictos en tus relaciones?",
+        "¿Cuáles son tus mayores fortalezas y debilidades emocionales?",
+        "¿Qué aspectos de tu personalidad te gustaría cambiar?",
+        "¿Cómo te ves a ti mismo dentro de 5 años en términos de tu bienestar emocional?"
+
+    ],
+    "azul": [
+        "¿Cuál ha sido la mayor frustración académica que has experimentado y cómo la superaste (o no)?",
+        "Si pudieras volver atrás en el tiempo, ¿qué consejo le darías a tu yo de 16 años sobre cómo manejar la presión académica?",
+        "¿Cuál es tu mayor miedo relacionado con el fracaso académico y por qué crees que sientes ese miedo?",
+        "¿Prefieres ser el mejor en algo o ser feliz haciendo lo que te gusta, aunque no seas el número uno?",
+        "¿Crees que la sociedad ejerce demasiada presión sobre los estudiantes para que obtengan buenas calificaciones? ¿Por qué?",
+        "¿Cuál es tu opinión sobre las comparaciones académicas con tus compañeros? ¿Crees que son útiles o perjudiciales?",
+        "¿Has alguna vez sentido que la carga académica te ha impedido disfrutar de otras áreas de tu vida? ¿Cómo has equilibrado ambas?",
+        "¿Cuál es tu mayor frustración con el sistema educativo actual?",
+        "¿Qué harías si te dieran a elegir entre tener un trabajo bien remunerado pero que no te gusta y seguir estudiando algo que te apasiona pero que no te garantiza un buen futuro económico?",
+        "¿Cómo te afecta el miedo al fracaso a la hora de afrontar nuevos desafíos académicos?"
+
+    ],
+    "verde": [
+        "¿Cuál es el alimento que más te avergüenza admitir que te encanta?",
+        "¿Has mentido alguna vez sobre lo que has comido para causar una buena impresión?",
+        "¿Te has sentido culpable alguna vez por comer algo que considerabas poco saludable?",
+        "¿Crees que la sociedad ejerce demasiada presión sobre los cuerpos y la alimentación?",
+        "¿Has probado alguna vez una dieta extrema y cómo te sentiste?",
+        "¿Qué opinas sobre los influencers de la salud y sus consejos nutricionales?",
+        "¿Crees que la industria alimentaria nos manipula para consumir alimentos procesados?",
+        "¿Qué cambiarías de tu relación con la comida?",
+        "¿Cuál es el mayor obstáculo que enfrentas para llevar una alimentación saludable?",
+        "¿Cómo te sentirías si tuvieras que renunciar a tu comida favorita para siempre?",
+        "¿Cuánta agua bebes al día realmente?",
+        "¿Con qué frecuencia comes comida rápida?",
+        "¿Cuántas porciones de frutas y verduras consumes al día?",
+        "¿Lees las etiquetas nutricionales de los alimentos antes de comprarlos?",
+        "¿Te saltas el desayuno con frecuencia?",
+        "¿Cuántas veces a la semana cocinas en casa?",
+        "¿Qué tipo de snacks sueles consumir entre comidas?",
+        "¿Cuál es tu relación con el azúcar?",
+        "¿Te sientes satisfecho con tu peso actual?",
+        "¿Has considerado consultar a un nutricionista?"
+
+    ],
+    "rosado": [
+        "¿Cuál es la experiencia más espiritual que has tenido y cómo te hizo sentir?",
+        "Si pudieras tener una conversación con una figura espiritual o religiosa, ¿qué le preguntarías?",
+        "¿Crees en la vida después de la muerte? ¿Cómo te imaginas?",
+        "¿Cuál es la mayor duda existencial que has tenido y cómo has tratado de resolverla?",
+        "¿Qué rol juega la espiritualidad en tu vida diaria? ¿Cómo influye en tus decisiones?",
+        "¿Cuál es tu mayor miedo relacionado con la muerte?",
+        "¿Qué crees que sucede con nuestra conciencia después de morir?",
+        "¿Has tenido alguna experiencia que te haya hecho cuestionar la realidad?",
+        "¿Crees en la reencarnación? ¿Por qué?",
+        "¿Cuál es tu mayor deseo espiritual?",
+        "¿Crees en la existencia de una fuerza superior o energía universal? ¿Cómo te conectas con ella?",
+        "¿Cómo concibes el concepto de karma? ¿Crees que tus acciones tienen consecuencias en el futuro?",
+        "¿Qué papel juega la naturaleza en tu espiritualidad?",
+        "¿Crees en la existencia de otros mundos o dimensiones?",
+        "¿Has tenido alguna experiencia que te haya hecho sentir parte de algo más grande que tú?"
+
+    ],
+    "morado": [
+        "¿Qué tanto se te dificulta hacer amigos?",
+        "¿Qué cualidades valoras más en tus amigos y por qué?",
+        "¿Cómo te sientes cuando pasas tiempo solo versus cuando estás con amigos?",
+        "Describe una situación en la que tuviste que resolver un conflicto con alguien. ¿Qué aprendiste de esa experiencia?",
+        "¿Te resulta fácil hablar de tus sentimientos con amigos? ¿Por qué sí o por qué no?",
+        "¿Cómo manejas el rechazo o la crítica de los demás?",
+        "¿Qué actividades disfrutas más hacer en grupo y por qué?",
+        "¿Cómo puedes apoyar a tus amigos cuando están pasando por momentos difíciles?",
+        "¿Qué te gustaría cambiar en la forma en que te relacionas con los demás?",
+        "¿Cómo te sientes al conocer a personas nuevas?",
+        "Describe una situación en la que te sentiste muy apoyado por tus amigos. ¿Qué pasó?",
+        "¿Qué haces para mantener el equilibrio entre tu vida social y tus estudios?",
+        "¿Cómo influye tu grupo de amigos en tu bienestar emocional?",
+        "¿Qué estrategias utilizas para mantener el contacto con amigos que no están cerca?",
+        "¿Cómo te gustaría que evolucionen tus relaciones a lo largo de tu vida académica?",
+        "¿Cómo manejas la presión social de tus compañeros en relación con el rendimiento académico?",
+        "¿Cómo te apoyas en tu familia y amigos fuera de la universidad para manejar el estrés académico?",
+        "¿Cómo te sientes al recibir críticas constructivas de tus compañeros sobre tu trabajo?",
+        "¿Cómo puedes contribuir al bienestar emocional de tus compañeros en momentos de alta presión?"
+
+    ],
+    "negro": [
+        "¿Cuál es el mayor desafío que has enfrentado en tu vida?",
+        "¿Cómo te ves a ti mismo dentro de cinco años?",
+        "¿Qué lección importante has aprendido en los últimos años?",
+        "¿Cuál es tu mayor deseo personal y cómo planeas lograrlo?",
+        "¿Cómo manejas las críticas constructivas?"
+    ]
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Equilibrio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="tower-container">
+        <div>
+            
+            <div class="button-grid" id="tower1"></div>
+        </div>
+        <div>
+            
+            <div class="button-grid" id="tower2"></div>
+        </div>
+    </div>
+    <div class="game-container">
+        <header>Juego de Equilibrio</header>
+        <div class="current-player" id="currentPlayer">Turno del Jugador 1</div>
+        <div class="question-container" id="questionContainer">
+            <p><strong>Pregunta:</strong> Lanza el dado para comenzar.</p>
+        </div>
+        <button id="rollDiceButton">Lanzar Dado</button>
+        <div class="scoreboard" id="playerScores">
+            <p>Jugador 1: <span id="player1Coins">0</span> monedas</p>
+            <p>Jugador 2: <span id="player2Coins">0</span> monedas</p>
+            <p>Jugador 3: <span id="player3Coins">0</span> monedas</p>
+            <p>Jugador 4: <span id="player4Coins">0</span> monedas</p>
+        </div>
+    </div>
+        
+    <script src="script.js"></script>
+
+</body>
+
+</html>

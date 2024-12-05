@@ -1,0 +1,52 @@
+{
+    "amarillo": [
+        "¿Cuál es el sentido de su existencia?",
+        "¿Cree que el camino que está llevando en este momento es correcto? ¿Por qué?",
+        "¿Considera que está dando lo mejor de sí en esta nueva etapa de su vida?",
+        "¿Qué le hace pensar que el camino que escogió para su futuro es el correcto?",
+        "¿Qué aspectos de usted considera que debería cambiar?"
+    ],
+    "morado": [
+        "¿Alguna vez ha sentido que una nota lo define?",
+        "¿Usted a qué le da más importancia: a la nota o a aprender?",
+        "¿Cuál es su método de aprendizaje?",
+        "¿Cómo sería su profesor ideal?",
+        "¿Qué le da más miedo: perder una materia o pasarla sin estar bien preparado?"
+    ],
+    "verde": [
+        "¿Usted hace ejercicio?",
+        "¿Cuántas veces a la semana hace ejercicio?",
+        "¿Usted come 3 veces al día?",
+        "¿Considera que lleva una dieta balanceada?",
+        "¿Qué es lo más sano que comió hoy?",
+        "¿Qué es lo más dañino que comió hoy?"
+    ],
+    "rojo": [
+        "¿Qué es para usted la inteligencia emocional?",
+        "¿Es capaz de controlar sus emociones cuando se encuentra en un ambiente desafiante para usted?",
+        "¿Qué tan a menudo pierde el control de sus emociones?",
+        "¿Usted se estresa con facilidad?",
+        "¿Cuáles son sus técnicas para controlar sus emociones?",
+        "¿Puede identificar cuando una persona se encuentra molesta, eufórica o triste?"
+    ],
+    "naranja": [
+        "¿Qué tan seguido habla con sus seres queridos?",
+        "¿Se mantiene en comunicación continua con los integrantes de su núcleo familiar?",
+        "¿Considera que tiene amigos en la universidad?",
+        "¿Le es fácil establecer lazos afectivos con otras personas?",
+        "¿Considera que tiene una buena relación con su familia?",
+        "¿Se considera sociable?"
+    ],
+    "blanco": [
+        "Bailar timba con el compañero de al lado enfrente del salón.",
+        "Cantar una canción a karaoke.",
+        "Cantar el rap del ciclo de Krebs sin trabarse.",
+        "Hacer 10 push-ups.",
+        "Hacer la pose del árbol.",
+        "Cantar una canción de Barbie Escuela de Princesas.",
+        "Cantar una canción de Maluma Pelón.",
+        "Comprar a la doctora Sandra un dulce o hacerle un dibujo.",
+        "Explicar su película favorita en 2 minutos.",
+        "Cantar la intro de My Little Pony."
+    ]
+}

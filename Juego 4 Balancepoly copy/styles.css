@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrar todo verticalmente */
+    text-align: center;
+}
+
+/* Contenedor principal que contiene el tablero y los controles */
+.board-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Tablero */
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+    grid-template-rows: repeat(7, 1fr); /* 7 filas */
+    width: 600px; /* Tamaño total del tablero */
+    height: 600px; /* Tamaño total del tablero */
+    position: relative;
+    border: 8px solid #1A2A44; /* Bordes más gruesos y alineados */
+    background-color: #fff;
+    box-sizing: border-box; /* Asegurarnos de que el borde esté incluido en el tamaño */
+    grid-gap: 0; /* Eliminar la separación entre las casillas */
+}
+
+/* Nombre del juego en el centro */
+.game-name {
+    position: absolute; /* Colocarlo en posición absoluta */
+    top: 38%; /* Subirlo un poco más para centrarlo mejor */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%) rotate(45deg); /* Centrar y rotar el texto */
+    font-size: 36px; /* Ajustar el tamaño del texto */
+    font-weight: bold;
+    color: #1A2A44; /* Color de texto */
+    white-space: nowrap; /* Asegurarse de que el texto no se rompa */
+    letter-spacing: 2px; /* Un poco de espacio entre las letras */
+    text-align: center;
+}
+
+/* Casillas */
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #1A2A44; /* Bordes de las casillas jugables */
+    position: relative; /* Para posicionar las piezas de los jugadores dentro */
+}
+
+/* Colores específicos para las casillas */
+.cell[data-dimension="bienestar-comunal"] {
+    background-color: #333333; /* Gris oscuro */
+    color: white; /* Texto blanco */
+}
+
+.cell[data-dimension="fisica"] {
+    background-color: #f06292; /* Rosa claro */
+}
+
+.cell[data-dimension="espiritual"] {
+    background-color: #42a5f5; /* Azul claro */
+}
+
+.cell[data-dimension="social"] {
+    background-color: #8e24aa; /* Morado */
+}
+
+.cell[data-dimension="emocional"] {
+    background-color: #fdd835; /* Amarillo */
+}
+
+.cell[data-dimension="academico"] {
+    background-color: #66bb6a; /* Verde */
+}
+
+/* Casilla "Salida" */
+.cell[data-dimension="gray"] {
+    background-color: #d3d3d3; /* Gris claro para la salida */
+    color: #000; /* Color de texto negro */
+}
+
+/* Estilos para el botón */
+.button-container {
+    margin-left: 20px; /* Separación entre el tablero y el botón */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #1A2A44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #162140;
+}
+
+/* Estilos de la pieza del jugador */
+.player-piece {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid black; /* Borde negro para las fichas */
+    background-color: red; /* Color de fondo por defecto */
+    z-index: 1; /* Asegurarse de que las fichas se muestren sobre las casillas */
+}
+
+/* Colores específicos para las piezas de los jugadores */
+.player-piece.player1 {
+    background-color: blue;
+}
+
+.player-piece.player2 {
+    background-color: green;
+}
+
+.player-piece.player3 {
+    background-color: orange;
+}
+
+.player-piece.player4 {
+    background-color: purple;
+}
+
+/* Estilos para el contenedor del dado */
+.button-container p {
+    font-size: 18px;
+    margin-top: 10px;
+}

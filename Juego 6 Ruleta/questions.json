@@ -1,0 +1,51 @@
+{
+    "Éxito": {
+        "1": "¿Qué es el éxito para usted?",
+        "2": "Definición: El éxito es el resultado de completar satisfactoriamente una tarea, proyecto, meta o acción. Aunque cada persona puede limitar el término de “éxito” para acomodarlo a sus experiencias o creencias personales.",
+        "3": "Objetivos para alcanzar el éxito: Ser más claros con nuestros objetivos, Crear rutinas y llevar un registro, Ser optimista pero realista.",
+        "4": "Análisis y contraste",
+        "5": "¿Con qué actividades o componentes equilibrarías el éxito para tener una estabilidad diaria?"
+    },
+    "Actividad física": {
+        "1": "¿Qué es actividad física para usted?",
+        "2": "Definición: La OMS define la actividad física como todo movimiento corporal producido por los músculos esqueléticos que requiere consumir energía. Caminar, correr, bailar, nadar, hacer yoga y hacer trabajos de jardín son algunos ejemplos de actividad física. Es importante tener en cuenta que se recomienda actividad física para todas las personas, desde los 3 años.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías la actividad física para tener una estabilidad diaria?"
+    },
+    "Salud mental": {
+        "1": "¿Qué es salud mental para usted?",
+        "2": "Definición: Es el bienestar social, emocional y psicológico. La salud mental también afecta la forma en que pensamos, sentimos y actuamos. Es un factor fundamental para relacionarnos con otras personas y es de suma importancia mantener un control de estas. Entre las recomendaciones está la actividad física, tener hábitos alimenticios, evitar las sobrecargas y, fijar metas.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías la salud mental para tener una estabilidad diaria?"
+    },
+    "Tiempo libre": {
+        "1": "¿Qué es el tiempo libre para usted?",
+        "2": "Definición: Se refiere a periodo de tiempo disponible que una persona utiliza de manera voluntaria y que no incluye actividades de tipo laboral, académicas, responsabilidad, deber o formativas que incurran en algún tipo de presión, exigencia o espera de resultados. Tiene características como la autonomía, voluntariedad, da cierto grado de placer y es un ámbito muy diverso.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías el tiempo libre para tener una estabilidad diaria?"
+    },
+    "Relaciones interpersonales": {
+        "1": "¿Qué son las relaciones interpersonales para usted?",
+        "2": "Definición: Son los vínculos que se desarrollan a lo largo de la vida. Pueden ser de diversos tipos: familiares, laborales, amistosas y románticas. Asimismo, pueden ser a corto o largo plazo y, la base fundamental es comunicación y respeto. Son fundamentales para un buen desarrollo emocional y social ya que se da y recibe apoyo.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías las relaciones interpersonales para tener una estabilidad diaria?"
+    },
+    "Estabilidad económica": {
+        "1": "¿Qué es estabilidad económica para usted?",
+        "2": "Definición: Es cuando una persona tiene seguridad y previsibilidad en sus ingresos y recursos financieros. No hay fluctuaciones extremas en su situación económica, lo que le permite cubrir sus necesidades básicas y planificar a futuro. Fomentar la estabilidad económica: ahorrar regularmente, presupuestar tus gastos, diversificar ingresos.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías la estabilidad económica para tener una estabilidad diaria?"
+    },
+    "Realización personal": {
+        "1": "¿Qué es realización personal para usted?",
+        "2": "Definición: Es la sensación de satisfacción y cumplimiento que una persona experimenta al lograr sus metas, sueños y potencial individual. Es una combinación de bienestar emocional, logros personales y sentido de propósito en la vida. Establecer metas claras, practicar la auto-reflexión, buscar actividades significativas.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías la realización personal para tener una estabilidad diaria?"
+    },
+    "Posición laboral": {
+        "1": "¿Qué es posición laboral para usted?",
+        "2": "Definición: Según el Ministerio de Educación Nacional, es la posición que la persona adquiere en el ejercicio de su trabajo. Desde un ámbito de superación, se refiere a la situación o el rol que ocupa en su entorno laboral y cómo esta posición puede influir en su desarrollo profesional y personal. Esta enfatiza el crecimiento y la mejora continua.",
+        "3": "Análisis y contraste",
+        "4": "¿Con qué actividades o componentes equilibrarías la posición laboral para tener una estabilidad diaria?"
+    }
+}

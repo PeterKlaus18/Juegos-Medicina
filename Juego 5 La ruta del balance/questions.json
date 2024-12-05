@@ -1,0 +1,94 @@
+{
+    "preguntas": [
+        {
+            "dimensión": "Social",
+            "pregunta": "¿Cómo equilibras tu tiempo entre responsabilidades y vida social?",
+            "opciones": [
+                {
+                    "respuesta": "Tengo un buen equilibrio y disfruto de ambas áreas",
+                    "puntos": 10
+                },
+                {
+                    "respuesta": "A veces me cuesta dedicar tiempo a mi vida social.",
+                    "puntos": 5
+                },
+                {
+                    "respuesta": "Me resulta difícil encontrar tiempo para socializar.",
+                    "puntos": 0
+                }
+            ]
+        },
+        {
+            "dimensión": "Psicológica",
+            "pregunta": "¿Cómo manejas el estrés y la carga emocional que trae consigo la cotidianidad?",
+            "opciones": [
+                {
+                    "respuesta": "Establezco mis prioridades, sin descuidar mi integridad física y mental, realizando actividades que disfruto y apoyándome en las personas de mi confianza.",
+                    "puntos": 10
+                },
+                {
+                    "respuesta": "Busco alguien de confianza con quien hablar, para desahogarme y a la vez trato de solo hacer las tareas que sé que puedo cumplir.",
+                    "puntos": 5
+                },
+                {
+                    "respuesta": "Evado mis responsabilidades e intento guardar mis problemas para mí mismo.",
+                    "puntos": 0
+                }
+            ]
+        },
+        {
+            "dimensión": "Académica",
+            "pregunta": "¿Cuál de las siguientes prácticas es considerada más efectiva, según estudios sobre el rendimiento académico, para lograr un equilibrio sostenible entre estudio y bienestar personal a largo plazo?",
+            "opciones": [
+                {
+                    "respuesta": "Priorizar la gestión del tiempo mediante el establecimiento de metas diarias y semanales, adaptando el horario de estudio y actividades personales según las necesidades y manteniendo momentos de descanso y desconexión.",
+                    "puntos": 10
+                },
+                {
+                    "respuesta": "Usar la técnica Pomodoro de manera estricta, alternando períodos de estudio intensivo de 25 minutos con descansos de 5 minutos, independientemente del contenido o dificultad de las tareas.",
+                    "puntos": 5
+                },
+                {
+                    "respuesta": "Establecer un horario de estudio fijo que se mantenga igual todos los días, sin variación, para desarrollar una rutina consistente y minimizar el estrés por decisiones diarias.",
+                    "puntos": 0
+                }
+            ]
+        },
+        {
+            "dimensión": "Física",
+            "pregunta": "¿Cómo gestionas el equilibrio entre el autocuidado físico y otras áreas de tu vida cuando se presentan conflictos de tiempo o prioridades?",
+            "opciones": [
+                {
+                    "respuesta": "Priorizo mi bienestar físico incluso cuando tengo otras responsabilidades importantes.",
+                    "puntos": 10
+                },
+                {
+                    "respuesta": "Trato de equilibrarlo, pero cuando estoy bajo presión, descuido mi salud física.",
+                    "puntos": 5
+                },
+                {
+                    "respuesta": "En la mayoría de los casos, sacrifico mi cuidado físico por otras responsabilidades.",
+                    "puntos": 0
+                }
+            ]
+        },
+        {
+            "dimensión": "Espiritual",
+            "pregunta": "¿Cómo influye tu conexión espiritual o práctica interna en la forma en que afrontas desafíos o tomas decisiones difíciles en tu vida?",
+            "opciones": [
+                {
+                    "respuesta": "Mi conexión espiritual es un pilar clave para enfrentar desafíos y tomar decisiones importantes, guiando mi perspectiva y acciones.",
+                    "puntos": 10
+                },
+                {
+                    "respuesta": "Mi conexión espiritual no es un pilar clave para enfrentar desafíos y tomar decisiones importantes, pero a veces guía mi perspectiva y acciones.",
+                    "puntos": 5
+                },
+                {
+                    "respuesta": "Mi espiritualidad tiene poco o ningún impacto directo en la manera en que enfrento desafíos o decisiones importantes.",
+                    "puntos": 0
+                }
+            ]
+        }
+    ]
+}

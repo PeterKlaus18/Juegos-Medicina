@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balancepoly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor principal que contiene el tablero y los controles -->
+    <div class="board-container">
+        <!-- Tablero de juego -->
+        <div class="board">
+            <!-- Nombre del juego en el centro del tablero -->
+            <div class="game-name">Balancepoly</div>
+
+            <!-- Casillas generadas dinámicamente por JS -->
+        </div>
+
+        <!-- Contenedor del botón -->
+        <div class="button-container">
+            <button onclick="rollDice()">Lanzar Dado</button>
+            <p id="diceResult">Resultado del dado: </p>
+            <p id="currentPlayer">Turno del jugador: 1</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

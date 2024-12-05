@@ -1,0 +1,117 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #d1f2d6; /* Fondo verde claro */
+    color: #2c3e50;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 3px solid #27ae60; /* Borde verde */
+}
+
+/* Título */
+h1 {
+    color: #27ae60;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Estilo del producto */
+#product-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #27ae60;
+}
+
+/* Estilo de los inputs */
+.product-info label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.product-info input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: 2px solid #27ae60; /* Borde verde claro */
+    border-radius: 10px;
+    background-color: #ecf8ec; /* Fondo verde suave */
+}
+
+/* Estilo del precio actual */
+.current-price h3 {
+    font-size: 28px;
+    color: #16a085;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los botones */
+.buttons button {
+    font-size: 20px;
+    margin: 15px 10px;
+    padding: 15px 30px;
+    background-color: #27ae60; /* Fondo verde */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #2ecc71; /* Fondo verde más brillante */
+    transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+/* Estilo del pie de página */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+/* Responsive - Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .product-info input {
+        font-size: 16px;
+    }
+
+    .buttons button {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}

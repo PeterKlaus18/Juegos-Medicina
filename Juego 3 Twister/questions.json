@@ -1,0 +1,50 @@
+{
+    "social": {
+        "amarillo": [
+            "Le he dado las gracias a cinco personas",
+            "He ayudado a un amigo en el último mes",
+            "He sacado tiempo para mi familia",
+            "Me he dado la oportunidad para abrirme con otra persona",
+            "No he dejado de ir a planes sociales por estudiar",
+            "He escuchado a alguien que lo necesita",
+            "He evitado peleas innecesarias al no actuar en caliente",
+            "He ofrecido ayuda a alguien sin que me lo pidiera"
+        ]
+    },
+    "fisico": {
+        "rojo": [
+            "Hoy tuve un desayuno balanceado",
+            "En la última semana hice tres días de ejercicio",
+            "No me he saltado ninguna comida esta semana",
+            "He decidido usar las escaleras en vez del ascensor",
+            "Me hidrato constantemente",
+            "Anoche dormí 8 o más horas",
+            "He hecho estiramientos después de despertar",
+            "Evito el consumo excesivo de comida chatarra"
+        ]
+    },
+    "academico": {
+        "verde": [
+            "Esta semana hice una lista y organicé mis tareas y entregas",
+            "Para el último parcial hice y cumplí un plan de estudio",
+            "No usé Chat GPT en mi última tarea",
+            "Esta semana he estudiado dos horas sin distracciones y sin ver el celular",
+            "No suelo compararme con el proceso de los demás",
+            "Esta semana he entregado todos mis trabajos a tiempo",
+            "He pedido ayuda cuando no entiendo",
+            "Tengo la rutina de revisar mis apuntes regularmente"
+        ]
+    },
+    "espiritual_emocional": {
+        "azul": [
+            "Esta semana he sacado tiempo para hacer mi hobby favorito",
+            "He reflexionado acerca de mis errores en los últimos días",
+            "Me he tomado el tiempo para pensar en mi propósito en la vida",
+            "Tengo claros mis valores a la hora de actuar y tomar decisiones",
+            "Considero que cuento con herramientas para manejar el estrés",
+            "He escuchado, leído o visto cosas que me hicieron crecer personalmente",
+            "He practicado la gratitud diariamente",
+            "Esta semana me he tomado tiempo para meditar o relajarme"
+        ]
+    }
+}
