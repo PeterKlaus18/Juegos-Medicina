@@ -141,6 +141,11 @@ main {
     border-radius: 25px;
 }
 
+#infografia {
+    height: 300px;
+    width: auto;
+}
+
 
 #console {
     font-family: 'Inconsolata', monospace;
