@@ -1,4 +1,4 @@
-
+/* style.css */
 
 body {
     font-family: Arial, sans-serif;
@@ -13,9 +13,12 @@ body {
 
 #board {
     display: grid;
-    grid-template-rows: repeat(6, 100px);  
-    grid-template-columns: repeat(4, 100px);  
-    gap: 10px;  
+    grid-template-rows: repeat(6, 100px);
+    /* 6 filas */
+    grid-template-columns: repeat(4, 100px);
+    /* 4 columnas */
+    gap: 10px;
+    /* Espacio entre las celdas */
 }
 
 .cell {
@@ -24,12 +27,14 @@ body {
     align-items: center;
     width: 100px;
     height: 100px;
-    border-radius: 50%;  
+    border-radius: 50%;
+    /* Forma circular */
     font-size: 24px;
     font-weight: bold;
     color: white;
     position: relative;
-    border: 2px solid black; 
+    border: 2px solid black;
+    /* Borde negro alrededor de cada celda */
 }
 
 .verde {
@@ -38,7 +43,8 @@ body {
 
 .amarillo {
     background-color: yellow;
-    color: black; 
+    color: black;
+    /* Cambiar color de texto a negro para mejor visibilidad */
 }
 
 .azul {
@@ -60,24 +66,33 @@ button:hover {
     background-color: #ddd;
 }
 
-
+/* Estilo para los íconos de mano */
 .cell i {
     font-size: 40px;
+    /* Tamaño de los íconos */
     color: white;
-    border: 2px solid black; 
-    border-radius: 50%; 
+    border: 2px solid black;
+    /* Borde negro para las manos */
+    border-radius: 50%;
+    /* Borde redondeado */
     padding: 5px;
+    /* Espacio entre el borde y el ícono */
 }
 
-
+/* Estilo para el ícono de pie (óvalo alargado en posición vertical) */
 .pie {
-    width: 30px; 
-    height: 60px; 
+    width: 30px;
+    /* Ancho más pequeño */
+    height: 60px;
+    /* Altura más grande para la forma vertical */
     background-color: white;
-    border-radius: 50%; 
+    border-radius: 50%;
+    /* Bordes redondeados */
     position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
-    border: 2px solid black; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Agregar sombra para hacerlo más visible */
+    border: 2px solid black;
+    /* Borde negro alrededor del pie */
 }
 
 .pie::before {
@@ -90,4 +105,36 @@ button:hover {
     background-color: white;
     border-radius: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Estilo general de los botones */
+.boton {
+    width: 80%;
+    height: 80%;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo específico para los pies (óvalo vertical) */
+.boton.pie {
+    border-radius: 50%;
+}
+
+.boton.pie div.pie {
+    width: 30px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Íconos de mano */
+.boton.mano i {
+    font-size: 40px;
+    color: black;
 }

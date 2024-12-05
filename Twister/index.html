@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuadrícula Circular de Colores</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <!-- Incluir Font Awesome para usar los íconos de manos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="board">
-        <!-- Fila 1 -->
-        <div class="cell verde" id="cell-1"></div>
-        <div class="cell amarillo" id="cell-2"></div>
-        <div class="cell azul" id="cell-3"></div>
-        <div class="cell rojo" id="cell-4"></div>
+    <div id="game-container">
+        <div id="board">
+            <!-- Fila 1 -->
+            <div class="cell verde" id="cell-1"></div>
+            <div class="cell amarillo" id="cell-2"></div>
+            <div class="cell azul" id="cell-3"></div>
+            <div class="cell rojo" id="cell-4"></div>
 
-        <!-- Fila 2 -->
-        <div class="cell verde" id="cell-5"></div>
-        <div class="cell amarillo" id="cell-6"></div>
-        <div class="cell azul" id="cell-7"></div>
-        <div class="cell rojo" id="cell-8"></div>
+            <!-- Fila 2 -->
+            <div class="cell verde" id="cell-5"></div>
+            <div class="cell amarillo" id="cell-6"></div>
+            <div class="cell azul" id="cell-7"></div>
+            <div class="cell rojo" id="cell-8"></div>
 
-        <!-- Fila 3 -->
-        <div class="cell verde" id="cell-9"></div>
-        <div class="cell amarillo" id="cell-10"></div>
-        <div class="cell azul" id="cell-11"></div>
-        <div class="cell rojo" id="cell-12"></div>
+            <!-- Fila 3 -->
+            <div class="cell verde" id="cell-9"></div>
+            <div class="cell amarillo" id="cell-10"></div>
+            <div class="cell azul" id="cell-11"></div>
+            <div class="cell rojo" id="cell-12"></div>
 
-        <!-- Fila 4 -->
-        <div class="cell verde" id="cell-13"></div>
-        <div class="cell amarillo" id="cell-14"></div>
-        <div class="cell azul" id="cell-15"></div>
-        <div class="cell rojo" id="cell-16"></div>
+            <!-- Fila 4 -->
+            <div class="cell verde" id="cell-13"></div>
+            <div class="cell amarillo" id="cell-14"></div>
+            <div class="cell azul" id="cell-15"></div>
+            <div class="cell rojo" id="cell-16"></div>
 
-        <!-- Fila 5 -->
-        <div class="cell verde" id="cell-17"></div>
-        <div class="cell amarillo" id="cell-18"></div>
-        <div class="cell azul" id="cell-19"></div>
-        <div class="cell rojo" id="cell-20"></div>
+            <!-- Fila 5 -->
+            <div class="cell verde" id="cell-17"></div>
+            <div class="cell amarillo" id="cell-18"></div>
+            <div class="cell azul" id="cell-19"></div>
+            <div class="cell rojo" id="cell-20"></div>
 
-        <!-- Fila 6 -->
-        <div class="cell verde" id="cell-21"></div>
-        <div class="cell amarillo" id="cell-22"></div>
-        <div class="cell azul" id="cell-23"></div>
-        <div class="cell rojo" id="cell-24"></div>
+            <!-- Fila 6 -->
+            <div class="cell verde" id="cell-21"></div>
+            <div class="cell amarillo" id="cell-22"></div>
+            <div class="cell azul" id="cell-23"></div>
+            <div class="cell rojo" id="cell-24"></div>
+        </div>
+        <!-- Botón para colocar las extremidades -->
+        <button id="colocar-boton" onclick="colocarIconos()">Colocar Manos y Pies</button>
     </div>
-
-    
-    <div id="preguntas-buttons" class="button-container">
-        <button id="si-btn">Sí</button>
-        <button id="no-btn">No</button>
-        
-        <button id="colocar-btn" onclick="colocarIconos()">Colocar Manos y Pies</button>
-    </div>
-
-    
-
     <script src="script.js"></script>
 </body>
+
 </html>
